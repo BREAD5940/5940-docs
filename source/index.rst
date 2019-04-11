@@ -10,5 +10,12 @@ Welcome to FIRST Robotics Documentation
    :maxdepth: 1
    :caption: Falconlibrary
 
-   docs/unofficial-libraries/team5190
+   docs/unofficial-libraries/team5190/falcon-library
+   docs/unofficial-libraries/team5190/falcon-dash
+   docs/unofficial-libraries/team5190/units-math
+   docs/unofficial-libraries/team5190/falcon-command-based
+   docs/unofficial-libraries/team5190/falconlib-pathing
+   docs/unofficial-libraries/team5190/example-drivebase
+   
+
 

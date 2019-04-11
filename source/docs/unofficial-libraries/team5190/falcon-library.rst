@@ -50,7 +50,7 @@ Java Interoperability
 FalconLibrary is written in Kotlin, a new programming language based
 on the Java Virtual Machine. Kotlin code is fully interoperable with
 Java code. One caviat: static functions and members will be split
-into their own file, seperate file. For instance, to construct a Java
+into their own class. For instance, to construct a Java
 Length, one would do:
 
    var x = LengthKt.getFeet(10);

@@ -1,37 +1,15 @@
 Example path following drivebases
 =====================================
 
-Some example drivebases to get you started on path following quickly
+Some example drivebases to get you started on path following quickly. For path following Commands, see ::doc:`/falconlib-pathing` 
+
+An example TalonSRX drivetrain with a NavX AHRS gyro
+------------------------------------------------------------
 
 .. tabs::
 
 
    .. code-tab:: java
-
-        package frc.robot.commands.subsystems.drivetrain;
-
-        import org.ghrobotics.lib.localization.Localization;
-        import org.ghrobotics.lib.localization.TankEncoderLocalization;
-        import org.ghrobotics.lib.mathematics.twodim.control.RamseteTracker;
-        import org.ghrobotics.lib.mathematics.twodim.control.TrajectoryTracker;
-        import org.ghrobotics.lib.mathematics.twodim.geometry.Pose2d;
-        import org.ghrobotics.lib.mathematics.units.Length;
-        import org.ghrobotics.lib.mathematics.units.LengthKt;
-        import org.ghrobotics.lib.mathematics.units.Rotation2dKt;
-        import org.ghrobotics.lib.mathematics.units.TimeUnitsKt;
-        import org.ghrobotics.lib.mathematics.units.nativeunits.NativeUnitKt;
-        import org.ghrobotics.lib.mathematics.units.nativeunits.NativeUnitLengthModel;
-        import org.ghrobotics.lib.subsystems.drive.DifferentialTrackerDriveBase;
-        import org.ghrobotics.lib.wrappers.ctre.FalconSRX;
-        import org.team5940.pantry.experimental.command.SendableSubsystemBase;
-        import org.team5940.pantry.lib.Util;
-
-        import com.kauailabs.navx.frc.AHRS;
-        import com.team254.lib.physics.DCMotorTransmission;
-        import com.team254.lib.physics.DifferentialDrive;
-
-        import edu.wpi.first.wpilibj.I2C.Port;
-        import edu.wpi.first.wpilibj.Notifier;
 
         public class DriveTrain extends SendableSubsystemBase /* or Subsystem */ implements DifferentialTrackerDriveBase {
 
@@ -99,7 +77,7 @@ Some example drivebases to get you started on path following quickly
             }
 
             private double getGyro(boolean isReversed) {
-                return gyro.getAngle() * ((isReversed) ? -1 : 1);
+                return gyro.getFusedHeading() * ((isReversed) ? -1 : 1);
             }
 
             @Override

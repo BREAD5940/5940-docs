@@ -104,29 +104,6 @@ An example path following command
 
    .. code-tab:: java
 
-        package frc.robot.commands.subsystems.drivetrain;
-
-        import java.util.function.Supplier;
-
-        import org.ghrobotics.lib.debug.LiveDashboard;
-        import org.ghrobotics.lib.mathematics.twodim.control.TrajectoryTracker;
-        import org.ghrobotics.lib.mathematics.twodim.geometry.Pose2d;
-        import org.ghrobotics.lib.mathematics.twodim.geometry.Pose2dWithCurvature;
-        import org.ghrobotics.lib.mathematics.twodim.trajectory.types.TimedEntry;
-        import org.ghrobotics.lib.mathematics.twodim.trajectory.types.TimedTrajectory;
-        import org.ghrobotics.lib.mathematics.twodim.trajectory.types.TrajectorySamplePoint;
-        import org.ghrobotics.lib.mathematics.units.Length;
-        import org.ghrobotics.lib.mathematics.units.TimeUnitsKt;
-        import org.ghrobotics.lib.subsystems.drive.TrajectoryTrackerOutput;
-        import org.team5940.pantry.experimental.command.SendableCommandBase;
-
-        import edu.wpi.first.wpilibj.Notifier;
-        import edu.wpi.first.wpilibj.Timer;
-        import frc.robot.Robot;
-        import frc.robot.commands.auto.Trajectories;
-        import frc.robot.lib.Logger;
-        import frc.robot.subsystems.DriveTrain;
-
         public class TrajectoryTrackerCommand extends SendableCommandBase {
                 private TrajectoryTracker trajectoryTracker;
                 private Supplier<TimedTrajectory<Pose2dWithCurvature>> trajectorySource;
