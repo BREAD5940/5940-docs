@@ -77,7 +77,7 @@ Rotation2d
 
 A Rotation2d represents a rotation in 2d space. Think of it like an angle
 on a unit circle - it can represent the angle of the triangle's hypotenuse,
-and can be converted into a ::ref:`Translation2d` with X and Y components
+and can be converted into a `Translation2d`_ with X and Y components
 correlated to the angle's sine and cosine components.
 
 .. tabs::
@@ -163,7 +163,50 @@ between two Translation2ds. This is very useful for path following.
       // get the Length of the hypotenuse of this
       val hypotenuseLength = tran.norm()
 
+Pose2d
+-------
 
+Pose2d is a composition of Translation2d and Rotation2d. It represents
+a point in 2 dimensional space with an associated heading, for example,
+      
+.. tabs::
+   .. code-tab:: java
+
+      var pose = new Pose2d(LengthKt.getInch(5), LengthKt.getInch(5), Rotation2dKt.getDegree(45);
+
+   .. code-tab:: kotlin
+
+      val pose = Pose2d(Translation2d(5.feet, 2.inch), 45.degree)
+
+This unit is also really useful for path following, and is used to
+represent a robot's 2d position on the field and a heading. The type
+also includes methods such as :code:`.mirror()`, which mirrors the Pose2d
+about the middle of the field (left/right, relative to the alliance wall),
+and the usual plus/minus functions, and interpolation methods. For
+more advanced functions such as :code:`inFrameOfReferenceOf()` or
+:code:`twist()`, teams are encourage to `Read the github source <https://github.com/5190GreenHopeRobotics/FalconLibrary/blob/32a9657467ad7866b9cca710cd937748f3c3aefb/src/main/kotlin/org/ghrobotics/lib/mathematics/twodim/geometry/Pose2d.kt>`_.
+
+Twist2d
+--------
+
+Coming soon, i'm confused.
+
+Twist2d holds a dx, dy and dtheta component to represent a robot "twist."
+More docs coming soon.
+
+Pose2dWithCurvature
+---------------------
+
+Pose2dWithCurvature, similar to Twist2d, holds :code:`Pose2d`
+and curvature components. Curvature is devined as one over
+the radius of a circle, and curvature can be positive or
+negative depending on the direction that the pose twists -
+left or right.
+
+Other Units
+------------
+
+Other cool units which you might use include Ohms, Volts and Amps.
 
 
 
