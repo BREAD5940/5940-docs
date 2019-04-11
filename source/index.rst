@@ -10,6 +10,7 @@ Welcome to FIRST Robotics Documentation
    :maxdepth: 1
    :caption: Falconlibrary
 
+   docs/index
    docs/unofficial-libraries/team5190/falcon-library
    docs/unofficial-libraries/team5190/falcon-dash
    docs/unofficial-libraries/team5190/units-math
