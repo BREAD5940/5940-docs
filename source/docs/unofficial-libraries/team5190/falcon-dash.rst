@@ -5,7 +5,7 @@ Falcon Dashboard is a Kotlin-based utility that can be used to generate
 trajectories and visualize the robot's position on the field live. This
 utility uses FalconLibrary as the backend trajectory generation code,
 and generates code that can be pasted into your robot code. The source
-code is publically avalible at https://github.com/5190GreenHopeRobotics/FalconDashboard
+code is publicly available at https://github.com/5190GreenHopeRobotics/FalconDashboard
 
 .. image:: images/dash1.png
    :width: 900
@@ -14,12 +14,12 @@ code is publically avalible at https://github.com/5190GreenHopeRobotics/FalconDa
    :width: 900
 
 Running FalconDashboard
-----------------------
+--------------------------
 
 Clone or download the repository, and execute this command from within
-the project root directory: 
+the project root directory:
 
-    ./gradlew run 
+    ./gradlew run
 
 Generating code
 -----------------
@@ -61,9 +61,7 @@ information. One example might be:
         addSequential(new FollowPathCommand(traject, true, m_DriveBase);
 
    .. code-tab:: kotlin
-   
-        // coming soon, coz i don't know Kotlin at all
-        
 
+        // coming soon, coz i don't know Kotlin at all
 
 

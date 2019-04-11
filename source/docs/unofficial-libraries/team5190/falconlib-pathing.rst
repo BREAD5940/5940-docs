@@ -14,9 +14,9 @@ provided
 waypoints, initial and ending velocities, maximum speeds and accelerations, and
 additional constraints including velocity limiting regions and
 drivetrain models (see the article on these). These trajectories are then
-uploaded to the robot, which follows them using a selection of avalible
+uploaded to the robot, which follows them using a selection of available
 followers. To do this, though, the robot needs to know where it is on the
-field and update it in real-time using a techique called Odometry, meaning
+field and update it in real-time using a technique called Odometry, meaning
 that your robot needs encoders
 and a form of gyroscope such as NavX or Pigeon IMU.
 
@@ -37,14 +37,14 @@ distances and robot heading. Review this for more information on
 
 
    .. code-tab:: java
-        // Implememntation from Team 5940
+        // Implementation from Team 5940
 
-        /* Create a localization object because lamda expressions are fun */
+        /* Create a localization object because lambda expressions are fun */
         localization = new TankEncoderLocalization(
                 // the gyro needs to be positive counter-clockwise
                 () -> Rotation2dKt.getDegree(getGyro(true)),
                 // and these need to return a Length
-                () -> getLeft().getDistance(), 
+                () -> getLeft().getDistance(),
                 () -> getRight().getDistance());
 
         /* set the robot pose to 0,0,0 */
@@ -76,23 +76,23 @@ which can be followed using:
         of
 - RAMSETE, non-linear feedback based on robot pose.
 
-It is reccomended that teams make their drivetrains implement
+It is recommended that teams make their drivetrains implement
 :code:`DifferentialTrackerDriveBase` and convert their motors
 to :code:`FalconMotor<Length>`, or it's subclasses, such as
-:code:`FalconSRX<Length>`. 
+:code:`FalconSRX<Length>`.
 
 The DifferentialTrackerDriveBase
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :code:`DifferentialTrackerDriveBase` is an interface for teams to quickly
-make their drivetrains integrate with FalconLibrary path following. The 
-interface requires you to have charicterized and modeled your drivetrain,
+make their drivetrains integrate with FalconLibrary path following. The
+interface requires you to have characterized and modeled your drivetrain,
 to have drive motors which subclass FalconMotor, and have implemented
 a form of localization. The method contains and inherits methods for
 utilizing the feedforward models of your drivetrain to estimate
 the voltage required for a (velocity, acceleration) command and setting
 motor output to a PID setpoint + feedforward voltage. See (TODO LINK)
-charicterizing your drivetrain for information on the DifferentialDrive
+characterizing your drivetrain for information on the DifferentialDrive
 class. A bare-bones example of a DifferentialTrackerDriveBase can be
 found (TODO LINK) HERE.
 
