@@ -8,7 +8,7 @@ FalconLibrary includes all common SI units and derived units as typesafe
 objects. This includes base units such as Length, Time and Voltage, as
 well as derived units such as Velocity and Acceleration.
 
-All typesafe units include common mathematical operators such as urinary
+All typesafe units include common mathematical operators such as unary
 plus, urinary minus, equivalency checks, multiplication and division.
 These functions do
 not modify the class on which they are called, but instead return a new
