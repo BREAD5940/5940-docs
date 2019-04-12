@@ -59,7 +59,7 @@ correlated to the angle's sine and cosine components.
 
 .. tabs::
    .. code-tab:: java
- 
+
       Rotation2d rotation = Rotation2dkt.getDegree(45);
 
       // returns true
@@ -127,7 +127,7 @@ Velocity
 
 Velocity, a derived unit, is often used to represent a linear or
 angular speed. However it is possible to make a Velocity of any
-type that impolements SIValue. The type of Velocity represented can be
+type that impalements SIValue. The type of Velocity represented can be
 parameterized by any class that implements SIValue - for instance, a
 :code:`Velocity<Length>`, or :code:`Velocity<Rotation2d>`, or even
 :code:`Velocity<NativeUnit>`.
@@ -152,7 +152,7 @@ parameterized by any class that implements SIValue - for instance, a
       val tenDegPerSec = 10.degree / 1.second
 
       val ticksPerSec = 10.nativeUnits / 1.second
-      
+
       // TODO make this actually work in kotlin
       val inRadiansPerSec = aVel.getType$FalconLibrary().getRadian();
 
@@ -161,7 +161,7 @@ Acceleration
 
 Acceleration, a derived unit of Velocity, is used to represent either
 a linear or angular acceleration. Similar to Length, the type can be
-parametrized by any class that implements SIValue. Similar to Length,
+parameterized by any class that implements SIValue. Similar to Length,
 Acceleration must be parameterized by a class with inherits SIValue.
 
 .. tabs::
@@ -243,7 +243,7 @@ Pose2d
 
 Pose2d is a composition of Translation2d and Rotation2d. It represents
 a point in 2 dimensional space with an associated heading, for example,
-      
+
 .. tabs::
    .. code-tab:: java
 
@@ -273,7 +273,7 @@ Pose2dWithCurvature
 ---------------------
 
 Pose2dWithCurvature, similar to Twist2d, holds :code:`Pose2d`
-and curvature components. Curvature is devined as one over
+and curvature components. Curvature is defined as one over
 the radius of a circle, and curvature can be positive or
 negative depending on the direction that the pose twists -
 left or right.
