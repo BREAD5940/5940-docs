@@ -12,8 +12,8 @@ All typesafe units include common mathematical operators such as unary
 plus, unary minus, equivalency checks, multiplication and division.
 
 .. note::
-   To use these functions in Java, one must call :code:`Rotation2dKt.getDegree(10).div(TimeUnitKt.getSecond(10))`
-   rather than :code:`Rotation2dKt.getDegree(10) / TimeUnitKt.getSecond(10)`.
+   To use these functions in Java, one must call :code:`Rotation2dKt.getDegree(10).div(TimeUnitsKt.getSecond(10))`
+   rather than :code:`Rotation2dKt.getDegree(10) / TimeUnitsKt.getSecond(10)`.
    This does not apply to Kotlin users.
 
 
@@ -22,6 +22,30 @@ plus, unary minus, equivalency checks, multiplication and division.
    not modify the class on which they are called, but instead return a new
    instance of it. So if I construct a new Length of 5 inches and call
    :code:`.plus(x)` on it, that original length is still 5 inches.
+
+All the base units contain the basic SI increments, such as milli-,
+micro-, nano, as well as kilo- or even yotta- and exa-.
+Additionally, units include (in general) the imperial equivalent,
+such as inches and feet or miles for Length or pounds for Mass.
+See your autocomplete for a full list of types.
+
+Time
+-----
+
+Time represents a time, and implements SIUnit. Use this to represent a
+passing time, a duration, or to construct derived units such as `Velocity`_
+and `Acceleration`_.'
+
+.. tabs::
+   .. code-tab:: java
+
+      Time aTime = TimeUnitsKt.getSecond(10);
+
+   .. code-tab:: kotlin
+
+      val aTime = 10.second
+
+      val anotherTime = 10.millisecond
 
 Length
 --------
@@ -281,7 +305,7 @@ left or right.
 Other Units
 ------------
 
-Other cool units which you might use include Ohms, Volts and Amps.
+Other cool units which you might use include Mass, Ohms, Volts and Amps.
 
 
 
