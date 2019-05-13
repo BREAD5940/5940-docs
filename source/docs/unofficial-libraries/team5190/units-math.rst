@@ -283,7 +283,7 @@ also includes methods such as :code:`.mirror()`, which mirrors the Pose2d
 about the middle of the field (left/right, relative to the alliance wall),
 and the usual plus/minus functions, and interpolation methods. For
 more advanced functions such as :code:`inFrameOfReferenceOf()` or
-:code:`twist()`, teams are encourage to `Read the github source <https://github.com/5190GreenHopeRobotics/FalconLibrary/blob/32a9657467ad7866b9cca710cd937748f3c3aefb/src/main/kotlin/org/ghrobotics/lib/mathematics/twodim/geometry/Pose2d.kt>`_.
+:code:`twist()`, teams are encourage to `Read the github source <https://github.com/5190GreenHopeRobotics/FalconLibrary/blob/32a9657467ad7866b9cca710cd937748f3c3aefb/src/main/kotlin/org/ghrobotics/lib/mathematics/twodim/geometry/Pose2d.kt>`__.
 
 Twist2d
 --------
@@ -305,7 +305,8 @@ left or right.
 Other Units
 ------------
 
-Other cool units which you might use include Mass, Ohms, Volts and Amps.
+Other SI Units of FalconLibrary not men sioned here include
+Mass, Ohms, Volts and Amps.
 
 
 
