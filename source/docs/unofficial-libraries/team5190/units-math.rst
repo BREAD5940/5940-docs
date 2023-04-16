@@ -1,7 +1,7 @@
 FalconLibrary Units and Math
 ==============================
 
-Summery
+Summary
 ---------
 
 FalconLibrary includes all common SI units and derived units as typesafe
